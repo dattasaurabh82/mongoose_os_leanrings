@@ -26,7 +26,6 @@ void http_ev_handler(struct mg_connection *c, int ev, void *ev_data) {
       digitalWrite(LED_PIN, LOW);
       mg_http_reply(c, 200, "", "{%m: %d}\n", MG_ESC("led"), digitalRead(LED_PIN));
     } else {
-      // mg_http_reply(c, 200, "", "ok, free RAM: %u\n", xPortGetFreeHeapSize());
       mg_http_reply(c, 200, "", "{%m: %u}\n", MG_ESC("free RAM"), xPortGetFreeHeapSize());
     }
   }
