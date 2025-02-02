@@ -1,3 +1,3 @@
 # mongoose_os_leanrings
 
-1. part 1: simple http server
+1. part 1: [simple http server (hello world)](mongoose_hello_world/) - video
