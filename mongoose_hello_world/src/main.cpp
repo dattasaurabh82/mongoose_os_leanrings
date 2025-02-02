@@ -13,14 +13,6 @@
 // Mongoose Object
 struct mg_mgr mgr;
 
-// Crude function to get available RAM, for quick profiling
-// size_t getFreeRAM(void) {
-//   size_t size = 0, increment = 1024;
-//   void *p;
-//   while ((p = malloc(size)) != NULL) free(p), size += increment;
-//   return size;
-// }
-
 // Mongoose Event Handler
 void http_ev_handler(struct mg_connection *c, int ev, void *ev_data) {
   if (ev == MG_EV_HTTP_MSG) {
